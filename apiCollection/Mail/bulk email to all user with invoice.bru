@@ -1,0 +1,26 @@
+meta {
+  name: bulk email to all user with invoice
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8082/api/pdf/bulk-email
+  body: json
+  auth: bearer
+}
+
+auth:basic {
+  username: 
+  password: 
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+    "invoiceId": 1
+  }
+}

@@ -1,0 +1,30 @@
+meta {
+  name: create invoices
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8082/api/invoice/
+  body: json
+  auth: none
+}
+
+auth:basic {
+  username: 
+  password: 
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+    "userId": 5,
+    "invoiceDate": "2024-07-20T10:00:00Z",
+    "dueDate": "2024-08-20T10:00:00Z",
+    "totalAmount": 5678
+  }
+  
+}

@@ -1,0 +1,27 @@
+meta {
+  name: update product
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8082/api/product/5
+  body: json
+  auth: none
+}
+
+auth:basic {
+  username: 
+  password: 
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+      "unitPrice": 5001
+  }
+  
+}

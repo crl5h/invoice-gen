@@ -1,0 +1,26 @@
+meta {
+  name: email invoice to user
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8082/api/pdf/email
+  body: json
+  auth: bearer
+}
+
+auth:basic {
+  username: 
+  password: 
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+    "invoiceId": 1
+  }
+}

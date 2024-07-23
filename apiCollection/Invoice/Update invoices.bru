@@ -1,0 +1,30 @@
+meta {
+  name: Update invoices
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8082/api/invoice/10
+  body: json
+  auth: none
+}
+
+auth:basic {
+  username: 
+  password: 
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+    "userId": 3,
+    "invoiceDate": "2024-07-20T10:00:00Z",
+    "dueDate": "2024-08-20T10:00:00Z",
+    "totalAmount": 150.68
+  }
+  
+}

@@ -1,0 +1,33 @@
+meta {
+  name: Signup
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8082/auth/signup
+  body: json
+  auth: bearer
+}
+
+auth:basic {
+  username: 
+  password: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "firstName": "John",
+    "lastName": "Bhai",
+    "email": "john2@example.com",
+    "password": "abc"
+  }
+}
+
+vars:post-response {
+  token: res.body.token
+}

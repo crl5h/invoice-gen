@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "emp_app",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

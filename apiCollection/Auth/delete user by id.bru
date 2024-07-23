@@ -1,0 +1,27 @@
+meta {
+  name: delete user by id
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:8082/api/user/1
+  body: json
+  auth: none
+}
+
+auth:basic {
+  username: 
+  password: 
+}
+
+auth:bearer {
+  token: 
+}
+
+body:json {
+  {
+    "email": "john.doeok@example.com",
+    "password": "password123"
+  }
+}
